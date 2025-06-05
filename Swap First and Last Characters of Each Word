@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String s=in.nextLine();
+        String w[]=s.split(" ");
+        StringBuilder res=new StringBuilder();
+        for(int i=0;i<w.length;i++){
+            String word=w[i];
+            if(word.length()<=1){
+                res.append(word);
+            }
+            else{
+                char f=word.charAt(0);
+                char l=word.charAt(word.length()-1);
+                res.append(l);
+                for(int j=1;j<word.length()-1;j++){
+                    res.append(word.charAt(j));
+                }
+                res.append(f);
+            }
+            if(i!=w.length-1){
+                res.append(" ");
+            }
+        }
+        System.out.print(res.toString());
+    }
+}
