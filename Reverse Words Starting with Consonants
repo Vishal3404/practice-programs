@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String s=in.nextLine();
+        String w[]=s.split(" ");
+        int vc=0;
+        for(int i=0;i<w.length;i++){
+            char c=w[i].charAt(0);
+            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='I'||c=='E'||c=='O'||c=='U'){
+                vc++;
+            }
+        }
+        if(vc!=0){    
+        for(int i=0;i<w.length;i++){
+            char c=w[i].charAt(0);
+            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='I'||c=='E'||c=='O'||c=='U'){
+                System.out.print(w[i]+" ");
+            }else{
+                for(int j=w[i].length()-1;j>=0;j--){
+                    System.out.print(w[i].charAt(j));
+                }
+                System.out.print(" ");
+            }
+        }
+        }else{
+            System.out.print("No Vowel Starting Word is present in String");
+        }
+    }
+}
