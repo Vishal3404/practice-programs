@@ -1,0 +1,12 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner ob=new Scanner(System.in);
+        int x=ob.nextInt();
+        String leap=(x%4==0&&x%100!=0)?"Yes":(x%400==0)?"Yes":"No";
+        System.out.print(leap);
+    }
+}
