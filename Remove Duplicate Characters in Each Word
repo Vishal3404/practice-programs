@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String s=in.nextLine();
+        String w[]=s.split(" ");
+        String res="";
+        String r="";
+        for(int i=0;i<w.length;i++){
+            String word=w[i];
+            r="";
+            for(int j=0;j<word.length();j++){
+                char c=word.charAt(j);
+                if(r.indexOf(c)==-1){
+                    r=r+c;
+                }
+            }
+            res=res+r;
+            res=res+" ";
+        }
+        System.out.print(res);
+    }
+}
