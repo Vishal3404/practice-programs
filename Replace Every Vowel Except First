@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String s=in.next();
+        int cn=0;
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||c=='A'||c=='E'||c=='I'||c=='O'||c=='U'){
+                cn++;
+                if(cn>1){
+                    System.out.print("*");
+                }else{
+                    System.out.print(c);
+                }
+            }
+            else{
+                System.out.print(c);
+            }
+        }
+        //System.out.print(res);
+    }
+}
