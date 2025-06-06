@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        int n=in.nextInt();
+        int s=in.nextInt();
+        int x=1;
+        for(int i=0;i<n;i++){
+            x*=10;
+        }
+        int y=x/10;
+        int sum=0,flag=0;
+        if(n==1&&s==0){
+            System.out.print("0");
+            return;
+        }
+        for(int i=x-1;i>=y;i--){
+            sum=0;
+            int c=i;
+            for(int j=0;j<n;j++){
+                int rem=c%10;
+                c=c/10;
+                sum=sum+rem;
+            }
+            if(sum==s){
+                System.out.print(i);
+                flag++;
+                break;
+            }
+        }if(flag==0){
+            System.out.print(-1);
+        }
+    }
+}
