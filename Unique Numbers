@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        int a=in.nextInt();
+        int b=in.nextInt();
+        for(int i=a;i<=b;i++){
+            String s=String.valueOf(i);
+            int flag=0;
+            if(i<10){
+                System.out.print(i+" ");
+            }
+            else{
+                for(int j=0;j<s.length();j++){
+                    for(int k=j+1;k<s.length();k++){
+                        if(s.charAt(j)==s.charAt(k)){
+                            flag++;
+                        }
+                    }
+                    if(flag!=0){
+                        break;
+                    }
+                }
+                if(flag==0){
+                    System.out.print(i+" ");
+                }
+            }
+        }
+    }
+}
