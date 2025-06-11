@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String s=in.nextLine();
+        int cn=0;
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(c==' '){
+                System.out.print(" ");
+            }
+            else{
+                if(cn%2==0){
+                    System.out.print(Character.toUpperCase(c));
+                }
+                else{
+                    System.out.print(Character.toLowerCase(c));
+                }
+                cn++;
+            }
+        }
+    }
+}
