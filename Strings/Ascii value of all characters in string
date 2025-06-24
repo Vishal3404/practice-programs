@@ -1,0 +1,15 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner inp=new Scanner(System.in);
+        String s=inp.nextLine();
+        int aski,i,n=s.length();
+        for(i=0;i<n;i++){
+            aski=(int)s.charAt(i);
+            System.out.print(aski+" ");
+        }
+    }
+}
