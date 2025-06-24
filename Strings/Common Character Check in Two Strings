@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String s1=in.nextLine();
+        String s2=in.nextLine();
+        int flag=0;
+        if(s1.length()>=s2.length()){
+            for(int i=0;i<s2.length();i++){
+                char c=s2.charAt(i);
+                if(s1.indexOf(c)!=-1){
+                    flag++;
+                }
+            }
+        }else{
+            for(int i=0;i<s1.length();i++){
+                char c=s1.charAt(i);
+                if(s2.indexOf(c)!=-1){
+                    flag++;
+                }
+            }
+        }
+        if(flag==0){
+            System.out.print("No");
+        }
+        else{
+            System.out.print("Yes");
+        }
+    }
+}
