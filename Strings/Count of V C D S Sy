@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        int ucv=0,lcv=0,ucc=0,dc=0,splc=0,sc=0,lcc=0;
+        String s=in.nextLine();
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+                lcv++;
+            else if(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+                ucv++;
+            else if(ch>='a'&&ch<='z')
+                lcc++;
+            else if(ch>='A'&&ch<='Z')
+                ucc++;
+            else if(ch>='0'&&ch<='9')
+                dc++;
+            else if(ch==' ')
+                sc++;
+            else
+                splc++;
+        }
+        System.out.println(lcv);
+        System.out.println(ucv);
+        System.out.println(lcc);
+        System.out.println(ucc);
+        System.out.println(dc);
+        System.out.println(splc);
+        System.out.println(sc); 
+    }
+}
