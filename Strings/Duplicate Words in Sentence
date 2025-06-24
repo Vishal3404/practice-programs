@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String s=in.nextLine();
+        String w[]=s.split(" ");
+        String unique[]=new String[w.length];
+        int freq[]=new int[w.length];
+        int uc=0;
+        boolean found=false;
+        for(int i=0;i<w.length;i++){
+            int flag=0;
+            for(int j=0;j<uc;j++){
+                if(w[i].equals(unique[j])){
+                    freq[j]++;
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==0){
+                unique[uc]=w[i];
+                freq[uc]=1;
+                uc++;
+            }
+        }
+        for(int i=0;i<uc;i++){
+            if(freq[i]>1){
+                System.out.print(unique[i]+" ");
+                found=true;
+            }
+        }
+        if(found==false){
+            System.out.print("None");
+        }
+    }
+}
