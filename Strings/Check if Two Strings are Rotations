@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String s1=in.next();
+        String s2=in.next();
+        String s1s2=s1+s1;
+        if(s1s2.indexOf(s2)!=-1){
+            System.out.print("True");
+        }
+        else{
+            System.out.print("False");
+        }
+    }
+}
