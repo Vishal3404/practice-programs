@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String s=in.next();
+        int k=in.nextInt();
+        int len=s.length();
+        k=k%len;
+        if(k==0){
+            System.out.print(s);
+        }
+        else{
+            String res=s.substring(len-k)+s.substring(0,len-k);
+            System.out.print(res);
+        }
+    }
+}
