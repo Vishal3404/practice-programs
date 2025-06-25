@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        String s=in.nextLine();
+        String w[]=s.split(" ");
+        for(int i=0;i<w.length;i++){
+            String word=w[i];
+            for(int j=0;j<word.length();j++){
+                char c=word.charAt(j);
+                if(j==0){
+                    System.out.print(Character.toUpperCase(c));
+                }
+                else{
+                    System.out.print(c);
+                }
+            }
+            System.out.print(" ");
+        }
+    }
+}
