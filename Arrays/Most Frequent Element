@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        int n=in.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++){
+            a[i]=in.nextInt();
+        }
+        Set<Integer> ob=new TreeSet<Integer>();
+        for(int i=0;i<n;i++){
+            ob.add(a[i]);
+        }
+        int res=0,max=0;
+        for(int i:ob){
+            int c=0;
+            for(int j=0;j<n;j++){
+                if(i==a[j]){
+                    c++;
+                }
+            }
+            if(c>res){
+                res=c;
+                max=i;
+            }
+        }
+        System.out.print(max);
+    }
+}
